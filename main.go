@@ -25,6 +25,14 @@ func main() {
 	t := time.Now()
 	src = rand.NewSource(uint64(t.Unix()))
 
+	// Test the Metropolis sampler
+	//testNormalMetropolis()
+	testDistributions()
+}
+
+// Test the Metropolis sampler for a normal distribution
+func testNormalMetropolis() {
+
 	// Generate random samples from a normal distribution
 	data := generateData(2, 1, 2000)
 	fmt.Println("Mean of data =", mean(data))
